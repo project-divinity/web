@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>TEMPLE OF AUSET</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+margin:0;
+font-family:'Cinzel', serif;
+color:#3b2e12;
+text-align:center;
+
+background: linear-gradient(-45deg,#f7e7b5,#f5efd8,#f1d48c,#f7e7b5);
+background-size:400% 400%;
+animation: desertMove 18s ease infinite;
+}
+
+@keyframes desertMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+header{
+background:#ead9a3;
+padding:50px;
+border-bottom:3px solid #c8a23a;
+}
+
+h1{
+font-size:50px;
+letter-spacing:4px;
+}
+
+.symbols{
+font-size:28px;
+margin-top:10px;
+}
+
+.hero img{
+width:100%;
+max-height:420px;
+object-fit:cover;
+}
+
+.section{
+margin:50px auto;
+width:85%;
+max-width:900px;
+
+background:white;
+border:2px solid #d4b45a;
+border-radius:12px;
+
+padding:40px;
+box-shadow:0 6px 15px rgba(0,0,0,0.1);
+}
+
+.section img{
+width:100%;
+border-radius:10px;
+margin-bottom:20px;
+}
+
+.ad{
+background:#fff6da;
+border:2px dashed #c8a23a;
+padding:30px;
+font-size:24px;
+margin:40px auto;
+max-width:800px;
+}
+
+.price{
+font-size:22px;
+color:#b58a1c;
+font-weight:bold;
+margin:10px 0;
+}
+
+ul{
+list-style:none;
+padding:0;
+line-height:2;
+font-size:18px;
+}
+
+button{
+background:#c8a23a;
+color:white;
+padding:12px 25px;
+border:none;
+font-size:16px;
+cursor:pointer;
+}
+
+button:hover{
+background:#a88420;
+}
+
+#tarotResult{
+margin-top:20px;
+font-size:22px;
+}
+
+.contact{
+font-size:20px;
+line-height:2;
+}
+
+footer{
+margin-top:40px;
+background:#ead9a3;
+padding:20px;
+font-size:14px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>TEMPLE OF AUSET</h1>
+
+<div class="symbols">
+𓋹 𓂀 𓆣
+</div>
+
+<p>Sacred Divination • Wisdom of Isis</p>
+
+</header>
+
+<div class="hero">
+<img src="https://images.unsplash.com/photo-1539768942893-daf53e448371?auto=format&fit=crop&w=1600&q=80">
+</div>
+
+<div class="ad">
+🔮 Do you want to experience Egyptian Scrying? 🔮<br><br>
+Scrying with Mohit
+</div>
+
+<div class="section">
+
+<img src="https://images.unsplash.com/photo-1601042879364-f3947d3f9c16?auto=format&fit=crop&w=1200&q=80">
+
+<h2>Temple Priest</h2>
+
+Mohit Sharma<br>
+I am 13 ! <br><br>
+
+Self-Taught Scrying Master<br>
+Tarot Reader<br>
+Oracle Reader<br>
+Intermediate Rune Caster<br><br>
+
+Experience: 1+ Years
+
+</div>
+
+<div class="section">
+
+<img src="https://images.unsplash.com/photo-1549893074-4bc5c5b0a2c7?auto=format&fit=crop&w=1200&q=80">
+
+<h2>Scrying Classes</h2>
+
+<div class="price">
+₹2500 per month
+</div>
+
+<p>What the class offers:</p>
+
+<ul>
+<li>History of Scrying — The Egyptian Way</li>
+<li>Egyptian Scrying</li>
+<li>Candle Scrying</li>
+<li>Paint Scrying</li>
+</ul>
+
+</div>
+
+<div class="section">
+
+<img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1200&q=80">
+
+<h2>My Philosophy</h2>
+
+<div class="price">
+₹2000
+</div>
+
+<p>What the class includes:</p>
+
+<ul>
+<li>The Way of Life</li>
+<li>Hermetic Philosophy</li>
+<li>Life After Death</li>
+<li>Good and Evil</li>
+</ul>
+
+</div>
+
+<div class="section">
+
+<img src="https://images.unsplash.com/photo-1601933470928-cf2e8f64d3c0?auto=format&fit=crop&w=1200&q=80">
+
+<h2>Tarot Reading</h2>
+
+<div class="price">
+₹2000 for 45 minutes
+</div>
+
+<p>Additional 15 minutes: ₹500</p>
+
+<p>What the reading offers:</p>
+
+<ul>
+<li>Tarot Reading</li>
+<li>Oracle Reading</li>
+<li>Guidance based on the cards</li>
+</ul>
+
+</div>
+
+<div class="section">
+
+<h2>Tarot Card Generator</h2>
+
+<p>Click to draw a tarot card.</p>
+
+<button onclick="drawCard()">Draw Tarot Card</button>
+
+<div id="tarotResult"></div>
+
+</div>
+
+<div class="section">
+
+<h2>Contact the Temple</h2>
+
+<div class="contact">
+
+Email:<br>
+work.emailm13@gmail.com<br><br>
+
+Instagram:<br>
+thetempleofauset<br><br>
+
+WhatsApp:<br>
+7678577007
+
+</div>
+
+</div>
+
+<footer>
+
+Temple of Auset • Devotion to the Divine Mother
+
+</footer>
+
+<script>
+
+const tarotCards=[
+"The Fool","The Magician","The High Priestess","The Empress",
+"The Emperor","The Hierophant","The Lovers","The Chariot",
+"Strength","The Hermit","Wheel of Fortune","Justice",
+"The Hanged Man","Death","Temperance","The Devil",
+"The Tower","The Star","The Moon","The Sun",
+"Judgement","The World"
+];
+
+function drawCard(){
+
+let card=tarotCards[Math.floor(Math.random()*tarotCards.length)];
+
+document.getElementById("tarotResult").innerHTML=
+"🔮 Your Card: <b>"+card+"</b>";
+
+}
+
+</script>
+
+</body>
+</html>
