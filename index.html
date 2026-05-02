@@ -2,224 +2,327 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Themis | Poetry Collective</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>THEMIS | Poetry Collective</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-    body {
-        margin: 0;
-        font-family: "Inter", sans-serif;
-        background: #0b1220;
-        color: #e2e8f0;
-    }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
 
-    header {
-        height: 70vh;
-        background: url("https://images.unsplash.com/photo-1457369804613-52c61a468e7d?auto=format&fit=crop&w=1600&q=80") center/cover;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        color: white;
-    }
+body{
+font-family:'Inter',sans-serif;
+background:#07111f;
+color:#e5edf8;
+line-height:1.7;
+}
 
-    header h1 {
-        font-family: "Cinzel", serif;
-        font-size: 60px;
-        margin: 0;
-        letter-spacing: 3px;
-    }
+/* HERO */
+header{
+min-height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.68)),
+url("https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=1600&q=80")
+center/cover no-repeat;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:30px;
+}
 
-    header p {
-        font-size: 18px;
-        opacity: 0.9;
-    }
+.hero{
+max-width:850px;
+}
 
-    .section {
-        max-width: 900px;
-        margin: auto;
-        padding: 40px 20px;
-    }
+header h1{
+font-family:'Cinzel',serif;
+font-size:76px;
+letter-spacing:6px;
+color:#f8d36b;
+margin-bottom:10px;
+}
 
-    .card {
-        background: rgba(255,255,255,0.05);
-        padding: 25px;
-        border-radius: 15px;
-        margin-bottom: 20px;
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255,255,255,0.08);
-    }
+header p{
+font-size:20px;
+color:#e2e8f0;
+margin-bottom:25px;
+}
 
-    h2 {
-        font-family: "Cinzel", serif;
-        color: #fbbf24;
-        margin-bottom: 10px;
-    }
+.btn{
+display:inline-block;
+padding:13px 24px;
+margin:8px;
+background:#f8d36b;
+color:#111827;
+text-decoration:none;
+font-weight:700;
+border-radius:12px;
+transition:.3s;
+}
 
-    p {
-        line-height: 1.7;
-        color: #cbd5e1;
-    }
+.btn:hover{
+transform:translateY(-3px);
+background:#ffe28d;
+}
 
-    button {
-        margin: 5px;
-        padding: 10px 14px;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-        background: #1e293b;
-        color: white;
-        transition: 0.3s;
-    }
+.btn-dark{
+background:rgba(255,255,255,.08);
+color:white;
+border:1px solid rgba(255,255,255,.12);
+}
 
-    button.active {
-        background: #fbbf24;
-        color: black;
-    }
+/* SECTION */
+section{
+max-width:1100px;
+margin:auto;
+padding:70px 20px;
+}
 
-    .result {
-        margin-top: 15px;
-        font-size: 18px;
-        color: #fbbf24;
-        font-weight: bold;
-    }
+.title{
+font-family:'Cinzel',serif;
+font-size:34px;
+color:#f8d36b;
+text-align:center;
+margin-bottom:18px;
+}
 
-    .coming {
-        text-align: center;
-        font-size: 22px;
-        font-weight: bold;
-        color: #fbbf24;
-    }
+.lead{
+max-width:800px;
+margin:0 auto 40px;
+text-align:center;
+color:#cbd5e1;
+}
 
-    footer {
-        text-align: center;
-        padding: 30px;
-        color: #64748b;
-    }
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:24px;
+}
 
-    .img {
-        width: 100%;
-        border-radius: 12px;
-        margin-top: 15px;
-    }
+.card{
+background:rgba(255,255,255,.04);
+border:1px solid rgba(255,255,255,.08);
+border-radius:18px;
+padding:24px;
+backdrop-filter:blur(8px);
+}
+
+.card h3{
+color:#f8d36b;
+margin-bottom:10px;
+font-size:22px;
+}
+
+.card p{
+color:#dce4f2;
+}
+
+.img{
+width:100%;
+border-radius:16px;
+margin-top:18px;
+}
+
+/* QUIZ */
+.quiz-buttons button{
+margin:6px;
+padding:10px 14px;
+border:none;
+border-radius:10px;
+cursor:pointer;
+background:#1e293b;
+color:white;
+transition:.3s;
+}
+
+.quiz-buttons button:hover{
+background:#334155;
+}
+
+.quiz-buttons button.active{
+background:#f8d36b;
+color:#111827;
+font-weight:700;
+}
+
+.result{
+margin-top:18px;
+font-size:20px;
+color:#f8d36b;
+font-weight:700;
+text-align:center;
+}
+
+/* FOOTER */
+footer{
+text-align:center;
+padding:40px 20px;
+border-top:1px solid rgba(255,255,255,.08);
+color:#94a3b8;
+}
+
+@media(max-width:768px){
+header h1{font-size:52px;}
+header p{font-size:18px;}
+.title{font-size:28px;}
+}
 </style>
 </head>
 
 <body>
 
+<!-- HERO -->
 <header>
-    <h1>THEMIS</h1>
-    <p>Where voices become eternal poetry</p>
+<div class="hero">
+<h1>THEMIS</h1>
+<p>Where voices become eternal poetry.</p>
+
+<a href="#submit" class="btn">Submit Poetry</a>
+
+<a href="https://project-divinity.github.io/philosophy/#explore" class="btn btn-dark">
+Explore Poetry & Philosophy
+</a>
+</div>
 </header>
 
-<div class="section">
+<!-- ABOUT -->
+<section>
+<h2 class="title">⚖️ About Themis</h2>
 
-    <!-- ABOUT -->
-    <div class="card">
-        <h2>⚖️ About Themis</h2>
-        <p>
-            Themis is a poetry collective inspired by truth, justice, and expression.
-            We transform human emotions into curated anthologies where every voice matters.
-        </p>
+<p class="lead">
+Themis is a poetic collective inspired by truth, justice, beauty, and expression.
+We publish meaningful voices into timeless anthologies.
+</p>
 
-        <img class="img"
-        src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?auto=format&fit=crop&w=1200&q=80">
-    </div>
+<div class="card">
+<img class="img"
+src="https://images.unsplash.com/photo-1502134249126-9f3755a50d78?auto=format&fit=crop&w=1400&q=80"
+alt="Starry night sky">
+</div>
+</section>
 
-    <!-- COMING SOON -->
-    <div class="card">
-        <h2>📚 Published Coming!!</h2>
-        <p class="coming">
-            Our first anthology is coming soon...<br>
-            A collection of voices, emotions, and truth.
-        </p>
-    </div>
+<!-- COMING -->
+<section>
+<h2 class="title">📚 Published Coming Soon</h2>
 
-    <!-- SUBMISSION -->
-    <div class="card">
-        <h2>📩 Submit Your Poetry</h2>
-        <p>
-            DM your poem, title, and pen name to Instagram:
-            <b>@divinitythemis</b><br>
-            Selected works will be published in our anthology.
-        </p>
-    </div>
+<div class="card">
+<p style="text-align:center;">
+Our first anthology is being crafted.<br>
+A gathering of emotions, thoughts, and voices from many souls.
+</p>
+</div>
+</section>
 
-    <!-- QUIZ -->
-    <div class="card">
-        <h2>🏛️ Greek God Quiz</h2>
-        <p>Select your traits:</p>
+<!-- SUBMIT -->
+<section id="submit">
+<h2 class="title">📩 Submit Your Poetry</h2>
 
-        <div>
-            <button onclick="toggle(this)">Calm 🌙</button>
-            <button onclick="toggle(this)">Powerful ⚡</button>
-            <button onclick="toggle(this)">Wise 🧠</button>
-            <button onclick="toggle(this)">Creative 🎨</button>
-            <button onclick="toggle(this)">Leader 👑</button>
-            <button onclick="toggle(this)">Emotional 💔</button>
-            <button onclick="toggle(this)">Independent 🕊️</button>
-        </div>
+<div class="card">
+<p style="text-align:center;">
+DM us on Instagram:<br><br>
+<b>@divinitythemis</b><br><br>
+Send your poem, title, and pen name.<br>
+Selected works will be featured in future books.
+</p>
+</div>
+</section>
 
-        <br>
-        <button onclick="findGod()">Reveal My Greek God</button>
+<!-- QUIZ -->
+<section>
+<h2 class="title">🏛️ Greek God Personality Quiz</h2>
 
-        <div class="result" id="result"></div>
-    </div>
+<p class="lead">Choose the traits that match you.</p>
 
+<div class="card">
+
+<div class="quiz-buttons" style="text-align:center;">
+<button onclick="toggle(this)">Wise 🦉</button>
+<button onclick="toggle(this)">Creative 🎨</button>
+<button onclick="toggle(this)">Powerful ⚡</button>
+<button onclick="toggle(this)">Leader 👑</button>
+<button onclick="toggle(this)">Emotional 💔</button>
+<button onclick="toggle(this)">Independent 🌙</button>
+<button onclick="toggle(this)">Logical 📜</button>
+<button onclick="toggle(this)">Rebellious 🔥</button>
+<button onclick="toggle(this)">Dreamer 🌌</button>
+<button onclick="toggle(this)">Calm 🌿</button>
+<button onclick="toggle(this)">Mystic 🔮</button>
 </div>
 
+<div style="text-align:center; margin-top:15px;">
+<button class="btn" onclick="findGod()">Reveal My God</button>
+</div>
+
+<div class="result" id="result"></div>
+
+</div>
+</section>
+
 <footer>
-    Contact us on Instagram: <b>@divinitythemis</b><br><br>
-    © THEMIS — Poetry Collective
+Instagram: @divinitythemis <br><br>
+© THEMIS — Poetry Collective
 </footer>
 
 <script>
-
-function toggle(btn) {
-    btn.classList.toggle("active");
+function toggle(btn){
+btn.classList.toggle("active");
 }
 
-function findGod() {
-    let active = document.querySelectorAll("button.active");
+function findGod(){
 
-    let calm = false, power = false, wise = false, creative = false, leader = false, emotional = false, independent = false;
+let selected = document.querySelectorAll(".quiz-buttons button.active");
 
-    active.forEach(b => {
-        if (b.innerText.includes("Calm")) calm = true;
-        if (b.innerText.includes("Powerful")) power = true;
-        if (b.innerText.includes("Wise")) wise = true;
-        if (b.innerText.includes("Creative")) creative = true;
-        if (b.innerText.includes("Leader")) leader = true;
-        if (b.innerText.includes("Emotional")) emotional = true;
-        if (b.innerText.includes("Independent")) independent = true;
-    });
+let wise=false, creative=false, power=false, leader=false,
+emotional=false, independent=false, rebel=false, dream=false,
+calm=false, mystic=false;
 
-    let result = "";
+selected.forEach(btn=>{
+let t=btn.innerText;
 
-    if (power && leader) {
-        result = "⚡ Zeus — King of Olympus";
-    }
-    else if (wise) {
-        result = "🦉 Athena — Goddess of wisdom";
-    }
-    else if (creative) {
-        result = "🎭 Apollo — God of poetry & art";
-    }
-    else if (emotional) {
-        result = "💔 Aphrodite — Goddess of emotion & love";
-    }
-    else if (calm || independent) {
-        result = "🌙 Artemis — Goddess of independence";
-    }
-    else {
-        result = "🌊 Poseidon — Deep emotional strength";
-    }
+if(t.includes("Wise") || t.includes("Logical")) wise=true;
+if(t.includes("Creative")) creative=true;
+if(t.includes("Powerful")) power=true;
+if(t.includes("Leader")) leader=true;
+if(t.includes("Emotional")) emotional=true;
+if(t.includes("Independent")) independent=true;
+if(t.includes("Rebellious")) rebel=true;
+if(t.includes("Dreamer")) dream=true;
+if(t.includes("Calm")) calm=true;
+if(t.includes("Mystic")) mystic=true;
+});
 
-    document.getElementById("result").innerText = result;
+let result="";
+
+if(power && leader){
+result="⚡ Zeus — Divine ruler and authority.";
+}
+else if(wise || mystic){
+result="🦉 Athena — Wisdom, intellect, strategy.";
+}
+else if(creative || dream){
+result="🎭 Apollo — Poetry, art, light.";
+}
+else if(emotional){
+result="💖 Aphrodite — Love, beauty, feeling.";
+}
+else if(rebel){
+result="🔥 Ares — Passion, chaos, boldness.";
+}
+else if(independent || calm){
+result="🌙 Artemis — Freedom, calm strength.";
+}
+else{
+result="🌊 Poseidon — Depth, emotion, power.";
 }
 
+document.getElementById("result").innerText=result;
+}
 </script>
 
 </body>
