@@ -2,169 +2,225 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Project Divinity</title>
+<title>Themis | Poetry Collective</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #1a0f2e, #2e0f3a, #0f1f3a);
-    color: white;
-    text-align: center;
-}
+    body {
+        margin: 0;
+        font-family: "Inter", sans-serif;
+        background: #0b1220;
+        color: #e2e8f0;
+    }
 
-/* HERO */
-.hero {
-    padding: 100px 20px;
-    background: linear-gradient(120deg, #c084fc, #60a5fa, #f472b6);
-    color: black;
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 50px;
-}
+    header {
+        height: 70vh;
+        background: url("https://images.unsplash.com/photo-1457369804613-52c61a468e7d?auto=format&fit=crop&w=1600&q=80") center/cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+    }
 
-.hero h1 {
-    font-family: 'Great Vibes', cursive;
-    font-size: 60px;
-}
+    header h1 {
+        font-family: "Cinzel", serif;
+        font-size: 60px;
+        margin: 0;
+        letter-spacing: 3px;
+    }
 
-.hero p {
-    font-size: 20px;
-}
+    header p {
+        font-size: 18px;
+        opacity: 0.9;
+    }
 
-/* BUTTON */
-.btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 14px 30px;
-    background: linear-gradient(90deg, #f472b6, #c084fc);
-    color: black;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-}
+    .section {
+        max-width: 900px;
+        margin: auto;
+        padding: 40px 20px;
+    }
 
-.btn:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 20px #c084fc;
-}
+    .card {
+        background: rgba(255,255,255,0.05);
+        padding: 25px;
+        border-radius: 15px;
+        margin-bottom: 20px;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255,255,255,0.08);
+    }
 
-/* SECTION */
-.section {
-    padding: 60px 20px;
-}
+    h2 {
+        font-family: "Cinzel", serif;
+        color: #fbbf24;
+        margin-bottom: 10px;
+    }
 
-.card {
-    background: rgba(255,255,255,0.08);
-    backdrop-filter: blur(15px);
-    border-radius: 25px;
-    padding: 30px;
-    max-width: 500px;
-    margin: 20px auto;
-    box-shadow: 0 0 30px rgba(192,132,252,0.3);
-}
+    p {
+        line-height: 1.7;
+        color: #cbd5e1;
+    }
 
-/* PRODUCT */
-.product {
-    background: linear-gradient(135deg, #2e1065, #4c1d95, #1e3a8a);
-    border-radius: 30px;
-    padding: 40px;
-    max-width: 450px;
-    margin: auto;
-    box-shadow: 0 0 40px rgba(96,165,250,0.4);
-}
+    button {
+        margin: 5px;
+        padding: 10px 14px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        background: #1e293b;
+        color: white;
+        transition: 0.3s;
+    }
 
-.price {
-    font-size: 32px;
-    color: #facc15;
-}
+    button.active {
+        background: #fbbf24;
+        color: black;
+    }
 
-/* FOOTER */
-.footer {
-    padding: 40px;
-    opacity: 0.7;
-}
+    .result {
+        margin-top: 15px;
+        font-size: 18px;
+        color: #fbbf24;
+        font-weight: bold;
+    }
+
+    .coming {
+        text-align: center;
+        font-size: 22px;
+        font-weight: bold;
+        color: #fbbf24;
+    }
+
+    footer {
+        text-align: center;
+        padding: 30px;
+        color: #64748b;
+    }
+
+    .img {
+        width: 100%;
+        border-radius: 12px;
+        margin-top: 15px;
+    }
 </style>
-
 </head>
+
 <body>
 
-<!-- HERO -->
-<div class="hero">
-    <h1>Project Divinity</h1>
-    <p>You are not becoming confident. You are remembering your power.</p>
-    <p>For those who feel invisible, anxious, or not enough — this is your transformation.</p>
+<header>
+    <h1>THEMIS</h1>
+    <p>Where voices become eternal poetry</p>
+</header>
 
-    <a href="https://instagram.com/divinityofisis" class="btn">✨ Buy Now</a>
-</div>
-
-<!-- IDENTITY -->
 <div class="section">
+
+    <!-- ABOUT -->
     <div class="card">
-        <h2>Your Identity Shift</h2>
+        <h2>⚖️ About Themis</h2>
         <p>
-        You were never lacking confidence.  
-        You were just disconnected from your true self.  
+            Themis is a poetry collective inspired by truth, justice, and expression.
+            We transform human emotions into curated anthologies where every voice matters.
         </p>
+
+        <img class="img"
+        src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?auto=format&fit=crop&w=1200&q=80">
+    </div>
+
+    <!-- COMING SOON -->
+    <div class="card">
+        <h2>📚 Published Coming!!</h2>
+        <p class="coming">
+            Our first anthology is coming soon...<br>
+            A collection of voices, emotions, and truth.
+        </p>
+    </div>
+
+    <!-- SUBMISSION -->
+    <div class="card">
+        <h2>📩 Submit Your Poetry</h2>
         <p>
-        Project Divinity helps you reconnect, rebalance, and rise.
+            DM your poem, title, and pen name to Instagram:
+            <b>@divinitythemis</b><br>
+            Selected works will be published in our anthology.
         </p>
     </div>
-</div>
 
-<!-- AFFIRMATIONS -->
-<div class="section">
+    <!-- QUIZ -->
     <div class="card">
-        <h2>Affirm Your Power</h2>
-        <p>✨ "Believe you can, and you’re halfway there." – Theodore Roosevelt</p>
-        <p>🔥"The most beautiful thing you can wear is confidence." – Blake Lively</p>
-        <p>🌙 "With realization of one's own potential and self-confidence in one's ability, one can build a better world." – The Dalai Lama</p>
-        
+        <h2>🏛️ Greek God Quiz</h2>
+        <p>Select your traits:</p>
+
+        <div>
+            <button onclick="toggle(this)">Calm 🌙</button>
+            <button onclick="toggle(this)">Powerful ⚡</button>
+            <button onclick="toggle(this)">Wise 🧠</button>
+            <button onclick="toggle(this)">Creative 🎨</button>
+            <button onclick="toggle(this)">Leader 👑</button>
+            <button onclick="toggle(this)">Emotional 💔</button>
+            <button onclick="toggle(this)">Independent 🕊️</button>
+        </div>
+
+        <br>
+        <button onclick="findGod()">Reveal My Greek God</button>
+
+        <div class="result" id="result"></div>
     </div>
+
 </div>
 
-<!-- PRODUCT -->
-<div class="section">
-    <div class="product">
-        <h2>Divinity Confidence Kit</h2>
-        <p>Lavender Essential Oil + Amethyst Pendant</p>
-        <p class="price">₹500</p>
+<footer>
+    Contact us on Instagram: <b>@divinitythemis</b><br><br>
+    © THEMIS — Poetry Collective
+</footer>
 
-        <h3>Benefits</h3>
-        <p>🌿 Reduces stress & anxiety</p>
-        <p>💤 Improves sleep & relaxation</p>
-        <p>💜 Emotional balance & calmness</p>
-        <p>✨ Boosts confidence & inner peace</p>
-        <p>🔮 Amethyst supports clarity & protection</p>
+<script>
 
-        <a href="https://instagram.com/divinityofisis" class="btn">Buy Now on Instagram</a>
-    </div>
-</div>
+function toggle(btn) {
+    btn.classList.toggle("active");
+}
 
-<!-- CONTACT -->
-<div class="section">
-    <div class="card">
-        <h2>Connect With Us</h2>
-        <p>📩 workemail.m13@gmail.com</p>
-        <p>📱 @divinityofisis</p>
-    </div>
-</div>
+function findGod() {
+    let active = document.querySelectorAll("button.active");
 
-<!-- FINAL -->
-<div class="section">
-    <div class="card">
-        <h2>Your Journey Starts Now</h2>
-        <p>Step into your power. Become unstoppable.</p>
-    </div>
-</div>
+    let calm = false, power = false, wise = false, creative = false, leader = false, emotional = false, independent = false;
 
-<!-- FOOTER -->
-<div class="footer">
-    © 2026 Project Divinity • Awaken your true self
-</div>
+    active.forEach(b => {
+        if (b.innerText.includes("Calm")) calm = true;
+        if (b.innerText.includes("Powerful")) power = true;
+        if (b.innerText.includes("Wise")) wise = true;
+        if (b.innerText.includes("Creative")) creative = true;
+        if (b.innerText.includes("Leader")) leader = true;
+        if (b.innerText.includes("Emotional")) emotional = true;
+        if (b.innerText.includes("Independent")) independent = true;
+    });
+
+    let result = "";
+
+    if (power && leader) {
+        result = "⚡ Zeus — King of Olympus";
+    }
+    else if (wise) {
+        result = "🦉 Athena — Goddess of wisdom";
+    }
+    else if (creative) {
+        result = "🎭 Apollo — God of poetry & art";
+    }
+    else if (emotional) {
+        result = "💔 Aphrodite — Goddess of emotion & love";
+    }
+    else if (calm || independent) {
+        result = "🌙 Artemis — Goddess of independence";
+    }
+    else {
+        result = "🌊 Poseidon — Deep emotional strength";
+    }
+
+    document.getElementById("result").innerText = result;
+}
+
+</script>
 
 </body>
 </html>
