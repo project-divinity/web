@@ -3,327 +3,164 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>THEMIS | Poetry Collective</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<title>Divinity Themis</title>
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-scroll-behavior:smooth;
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Poppins:wght@300;400&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at top, #1a0033, #000000);
+    color: white;
+    overflow-x: hidden;
 }
 
-body{
-font-family:'Inter',sans-serif;
-background:#07111f;
-color:#e5edf8;
-line-height:1.7;
+/* Glow effect */
+.glow {
+    text-shadow: 0 0 10px #c77dff, 0 0 20px #9d4edd;
 }
 
-/* HERO */
-header{
-min-height:100vh;
-background:
-linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.68)),
-url("https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=1600&q=80")
-center/cover no-repeat;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:30px;
+/* HEADER */
+header {
+    text-align: center;
+    padding: 100px 20px;
 }
 
-.hero{
-max-width:850px;
+header h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 3.5em;
+    letter-spacing: 3px;
+    background: linear-gradient(90deg, #c77dff, #7b2cbf, #e0aaff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-header h1{
-font-family:'Cinzel',serif;
-font-size:76px;
-letter-spacing:6px;
-color:#f8d36b;
-margin-bottom:10px;
+header p {
+    opacity: 0.7;
+    margin-top: 10px;
 }
 
-header p{
-font-size:20px;
-color:#e2e8f0;
-margin-bottom:25px;
+/* SECTIONS */
+.section {
+    padding: 60px 20px;
+    text-align: center;
 }
 
-.btn{
-display:inline-block;
-padding:13px 24px;
-margin:8px;
-background:#f8d36b;
-color:#111827;
-text-decoration:none;
-font-weight:700;
-border-radius:12px;
-transition:.3s;
+/* COURSES */
+.courses {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
 }
 
-.btn:hover{
-transform:translateY(-3px);
-background:#ffe28d;
+.card {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    padding: 25px;
+    width: 280px;
+    border-radius: 15px;
+    transition: 0.4s;
+    box-shadow: 0 0 20px rgba(199,125,255,0.2);
 }
 
-.btn-dark{
-background:rgba(255,255,255,.08);
-color:white;
-border:1px solid rgba(255,255,255,.12);
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 0 30px rgba(199,125,255,0.6);
 }
 
-/* SECTION */
-section{
-max-width:1100px;
-margin:auto;
-padding:70px 20px;
+/* CLICKABLE LINKS (NO BUTTONS) */
+.link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    border: 1px solid #c77dff;
+    border-radius: 25px;
+    transition: 0.3s;
 }
 
-.title{
-font-family:'Cinzel',serif;
-font-size:34px;
-color:#f8d36b;
-text-align:center;
-margin-bottom:18px;
+.link:hover {
+    background: #c77dff;
+    color: black;
 }
 
-.lead{
-max-width:800px;
-margin:0 auto 40px;
-text-align:center;
-color:#cbd5e1;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:24px;
-}
-
-.card{
-background:rgba(255,255,255,.04);
-border:1px solid rgba(255,255,255,.08);
-border-radius:18px;
-padding:24px;
-backdrop-filter:blur(8px);
-}
-
-.card h3{
-color:#f8d36b;
-margin-bottom:10px;
-font-size:22px;
-}
-
-.card p{
-color:#dce4f2;
-}
-
-.img{
-width:100%;
-border-radius:16px;
-margin-top:18px;
-}
-
-/* QUIZ */
-.quiz-buttons button{
-margin:6px;
-padding:10px 14px;
-border:none;
-border-radius:10px;
-cursor:pointer;
-background:#1e293b;
-color:white;
-transition:.3s;
-}
-
-.quiz-buttons button:hover{
-background:#334155;
-}
-
-.quiz-buttons button.active{
-background:#f8d36b;
-color:#111827;
-font-weight:700;
-}
-
-.result{
-margin-top:18px;
-font-size:20px;
-color:#f8d36b;
-font-weight:700;
-text-align:center;
+/* MENTAL AI SECTION */
+.ai-box {
+    margin-top: 40px;
+    padding: 20px;
+    border: 1px solid #9d4edd;
+    border-radius: 15px;
+    display: inline-block;
+    box-shadow: 0 0 20px rgba(157,78,221,0.4);
 }
 
 /* FOOTER */
-footer{
-text-align:center;
-padding:40px 20px;
-border-top:1px solid rgba(255,255,255,.08);
-color:#94a3b8;
-}
-
-@media(max-width:768px){
-header h1{font-size:52px;}
-header p{font-size:18px;}
-.title{font-size:28px;}
+footer {
+    text-align: center;
+    padding: 30px;
+    opacity: 0.5;
 }
 </style>
+
 </head>
 
 <body>
 
-<!-- HERO -->
 <header>
-<div class="hero">
-<h1>THEMIS</h1>
-<p>Where voices become eternal poetry.</p>
-
-<a href="#submit" class="btn">Submit Poetry</a>
-
-<a href="https://project-divinity.github.io/philosophy/#explore" class="btn btn-dark">
-Explore Poetry & Philosophy
-</a>
-</div>
+    <h1 class="glow">Divinity Themis</h1>
+    <p>Exploring Metaphysics • Awakening Thought • Beyond Reality</p>
 </header>
 
-<!-- ABOUT -->
-<section>
-<h2 class="title">⚖️ About Themis</h2>
+<section class="section">
+    <h2 class="glow">Courses</h2>
 
-<p class="lead">
-Themis is a poetic collective inspired by truth, justice, beauty, and expression.
-We publish meaningful voices into timeless anthologies.
-</p>
+    <div class="courses">
 
-<div class="card">
-<img class="img"
-src="https://images.unsplash.com/photo-1502134249126-9f3755a50d78?auto=format&fit=crop&w=1400&q=80"
-alt="Starry night sky">
-</div>
+        <div class="card">
+            <h3>Metaphysics: Reality & Being</h3>
+            <p>Understand existence, time, and the nature of reality.</p>
+            <a class="link" href="https://instagram.com/divinitythemis" target="_blank">
+                Enroll Now
+            </a>
+        </div>
+
+        <div class="card">
+            <h3>Philosophy of Mind</h3>
+            <p>Explore consciousness, perception, and thought.</p>
+            <a class="link" href="https://instagram.com/divinitythemis" target="_blank">
+                Enroll Now
+            </a>
+        </div>
+
+        <div class="card">
+            <h3>Ethics & Truth</h3>
+            <p>Dive into morality, logic, and universal truth.</p>
+            <a class="link" href="https://instagram.com/divinitythemis" target="_blank">
+                Enroll Now
+            </a>
+        </div>
+
+    </div>
 </section>
 
-<!-- COMING -->
-<section>
-<h2 class="title">📚 Published Coming Soon</h2>
+<section class="section">
+    <h2 class="glow">MENTAL.AI</h2>
 
-<div class="card">
-<p style="text-align:center;">
-Our first anthology is being crafted.<br>
-A gathering of emotions, thoughts, and voices from many souls.
-</p>
-</div>
-</section>
+    <div class="ai-box">
+        <p>Seek clarity. Reflect. Heal.</p>
 
-<!-- SUBMIT -->
-<section id="submit">
-<h2 class="title">📩 Submit Your Poetry</h2>
-
-<div class="card">
-<p style="text-align:center;">
-DM us on Instagram:<br><br>
-<b>@divinitythemis</b><br><br>
-Send your poem, title, and pen name.<br>
-Selected works will be featured in future books.
-</p>
-</div>
-</section>
-
-<!-- QUIZ -->
-<section>
-<h2 class="title">🏛️ Greek God Personality Quiz</h2>
-
-<p class="lead">Choose the traits that match you.</p>
-
-<div class="card">
-
-<div class="quiz-buttons" style="text-align:center;">
-<button onclick="toggle(this)">Wise 🦉</button>
-<button onclick="toggle(this)">Creative 🎨</button>
-<button onclick="toggle(this)">Powerful ⚡</button>
-<button onclick="toggle(this)">Leader 👑</button>
-<button onclick="toggle(this)">Emotional 💔</button>
-<button onclick="toggle(this)">Independent 🌙</button>
-<button onclick="toggle(this)">Logical 📜</button>
-<button onclick="toggle(this)">Rebellious 🔥</button>
-<button onclick="toggle(this)">Dreamer 🌌</button>
-<button onclick="toggle(this)">Calm 🌿</button>
-<button onclick="toggle(this)">Mystic 🔮</button>
-</div>
-
-<div style="text-align:center; margin-top:15px;">
-<button class="btn" onclick="findGod()">Reveal My God</button>
-</div>
-
-<div class="result" id="result"></div>
-
-</div>
+        <a class="link" href="https://project-divinity.github.io/philosophy/" target="_blank">
+            Enter MENTAL.AI
+        </a>
+    </div>
 </section>
 
 <footer>
-Instagram: @divinitythemis <br><br>
-© THEMIS — Poetry Collective
+    © 2026 Divinity Themis
 </footer>
-
-<script>
-function toggle(btn){
-btn.classList.toggle("active");
-}
-
-function findGod(){
-
-let selected = document.querySelectorAll(".quiz-buttons button.active");
-
-let wise=false, creative=false, power=false, leader=false,
-emotional=false, independent=false, rebel=false, dream=false,
-calm=false, mystic=false;
-
-selected.forEach(btn=>{
-let t=btn.innerText;
-
-if(t.includes("Wise") || t.includes("Logical")) wise=true;
-if(t.includes("Creative")) creative=true;
-if(t.includes("Powerful")) power=true;
-if(t.includes("Leader")) leader=true;
-if(t.includes("Emotional")) emotional=true;
-if(t.includes("Independent")) independent=true;
-if(t.includes("Rebellious")) rebel=true;
-if(t.includes("Dreamer")) dream=true;
-if(t.includes("Calm")) calm=true;
-if(t.includes("Mystic")) mystic=true;
-});
-
-let result="";
-
-if(power && leader){
-result="⚡ Zeus — Divine ruler and authority.";
-}
-else if(wise || mystic){
-result="🦉 Athena — Wisdom, intellect, strategy.";
-}
-else if(creative || dream){
-result="🎭 Apollo — Poetry, art, light.";
-}
-else if(emotional){
-result="💖 Aphrodite — Love, beauty, feeling.";
-}
-else if(rebel){
-result="🔥 Ares — Passion, chaos, boldness.";
-}
-else if(independent || calm){
-result="🌙 Artemis — Freedom, calm strength.";
-}
-else{
-result="🌊 Poseidon — Depth, emotion, power.";
-}
-
-document.getElementById("result").innerText=result;
-}
-</script>
 
 </body>
 </html>
