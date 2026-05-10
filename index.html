@@ -3,163 +3,423 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Divinity Themis</title>
+
+<title>THEIA • AI • Cyber Law • Computer Science</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Poppins:wght@300;400&display=swap');
 
-body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: radial-gradient(circle at top, #1a0033, #000000);
-    color: white;
-    overflow-x: hidden;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
 }
 
-/* Glow effect */
-.glow {
-    text-shadow: 0 0 10px #c77dff, 0 0 20px #9d4edd;
+body{
+    font-family:'Inter',sans-serif;
+    background:#030712;
+    color:white;
+    overflow-x:hidden;
 }
 
-/* HEADER */
-header {
-    text-align: center;
-    padding: 100px 20px;
+/* BACKGROUND */
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:
+    radial-gradient(circle at top left,#00f0ff22,transparent 25%),
+    radial-gradient(circle at bottom right,#8b5cf633,transparent 30%),
+    radial-gradient(circle at center,#2563eb22,transparent 35%);
+    z-index:-3;
 }
 
-header h1 {
-    font-family: 'Cinzel', serif;
-    font-size: 3.5em;
-    letter-spacing: 3px;
-    background: linear-gradient(90deg, #c77dff, #7b2cbf, #e0aaff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.grid{
+    position:fixed;
+    inset:0;
+    background-image:
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+    background-size:45px 45px;
+    z-index:-2;
+    animation:gridMove 18s linear infinite;
 }
 
-header p {
-    opacity: 0.7;
-    margin-top: 10px;
+@keyframes gridMove{
+    from{
+        transform:translateY(0px);
+    }
+    to{
+        transform:translateY(45px);
+    }
 }
 
-/* SECTIONS */
-.section {
-    padding: 60px 20px;
-    text-align: center;
+/* NAVBAR */
+
+nav{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:24px 10%;
+    position:sticky;
+    top:0;
+    backdrop-filter:blur(18px);
+    border-bottom:1px solid rgba(255,255,255,0.05);
+    z-index:1000;
 }
 
-/* COURSES */
-.courses {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
+.logo{
+    font-family:'Orbitron',sans-serif;
+    font-size:2rem;
+    font-weight:800;
+    color:#00f0ff;
+    letter-spacing:3px;
+    text-shadow:0 0 18px #00f0ff;
 }
 
-.card {
-    background: rgba(255,255,255,0.05);
-    backdrop-filter: blur(10px);
-    padding: 25px;
-    width: 280px;
-    border-radius: 15px;
-    transition: 0.4s;
-    box-shadow: 0 0 20px rgba(199,125,255,0.2);
+nav ul{
+    display:flex;
+    gap:28px;
+    list-style:none;
 }
 
-.card:hover {
-    transform: translateY(-10px) scale(1.03);
-    box-shadow: 0 0 30px rgba(199,125,255,0.6);
+nav ul li a{
+    text-decoration:none;
+    color:#dbe4f0;
+    transition:0.3s;
+    font-weight:500;
 }
 
-/* CLICKABLE LINKS (NO BUTTONS) */
-.link {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 10px 20px;
-    text-decoration: none;
-    color: white;
-    border: 1px solid #c77dff;
-    border-radius: 25px;
-    transition: 0.3s;
+nav ul li a:hover{
+    color:#00f0ff;
 }
 
-.link:hover {
-    background: #c77dff;
-    color: black;
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:80px 10%;
+    position:relative;
 }
 
-/* MENTAL AI SECTION */
-.ai-box {
-    margin-top: 40px;
-    padding: 20px;
-    border: 1px solid #9d4edd;
-    border-radius: 15px;
-    display: inline-block;
-    box-shadow: 0 0 20px rgba(157,78,221,0.4);
+.hero-content{
+    max-width:1000px;
+}
+
+.hero h1{
+    font-family:'Orbitron',sans-serif;
+    font-size:5.5rem;
+    line-height:1.1;
+    margin-bottom:25px;
+
+    background:linear-gradient(to right,#00f0ff,#8b5cf6,#ffffff);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.hero p{
+    font-size:1.25rem;
+    line-height:1.9;
+    color:#cbd5e1;
+    margin-bottom:40px;
+}
+
+/* BUTTONS */
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:22px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:16px 38px;
+    border-radius:16px;
+    text-decoration:none;
+    font-weight:700;
+    transition:0.35s;
+    position:relative;
+    overflow:hidden;
+}
+
+.primary{
+    background:linear-gradient(135deg,#00f0ff,#8b5cf6);
+    color:white;
+    box-shadow:0 0 35px rgba(0,240,255,0.35);
+}
+
+.primary:hover{
+    transform:translateY(-5px) scale(1.03);
+}
+
+.secondary{
+    border:1px solid #00f0ff88;
+    color:#00f0ff;
+    background:rgba(255,255,255,0.03);
+}
+
+.secondary:hover{
+    background:#00f0ff11;
+    transform:translateY(-5px);
+}
+
+/* SECTION */
+
+.section{
+    padding:120px 10%;
+}
+
+.section-title{
+    text-align:center;
+    font-family:'Orbitron',sans-serif;
+    font-size:3rem;
+    margin-bottom:70px;
+    color:#00f0ff;
+}
+
+/* CARDS */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:35px;
+}
+
+.card{
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:28px;
+    padding:40px;
+    backdrop-filter:blur(20px);
+    transition:0.4s;
+    position:relative;
+    overflow:hidden;
+}
+
+.card::before{
+    content:"";
+    position:absolute;
+    width:150px;
+    height:150px;
+    background:#00f0ff15;
+    border-radius:50%;
+    top:-60px;
+    right:-60px;
+}
+
+.card:hover{
+    transform:translateY(-12px);
+    border-color:#00f0ff;
+    box-shadow:0 0 35px rgba(0,240,255,0.18);
+}
+
+.card h3{
+    font-size:1.7rem;
+    margin-bottom:18px;
+}
+
+.card p{
+    color:#cbd5e1;
+    line-height:1.8;
+}
+
+/* AI CORE */
+
+.ai-core{
+    padding:120px 10%;
+    text-align:center;
+}
+
+.ai-box{
+    max-width:950px;
+    margin:auto;
+    padding:60px;
+    border-radius:35px;
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.08);
+    backdrop-filter:blur(20px);
+    box-shadow:0 0 50px rgba(0,240,255,0.12);
+}
+
+.ai-box h2{
+    font-size:3rem;
+    margin-bottom:28px;
+    font-family:'Orbitron',sans-serif;
+    color:#00f0ff;
+}
+
+.ai-box p{
+    font-size:1.15rem;
+    line-height:2;
+    color:#dbe4f0;
 }
 
 /* FOOTER */
-footer {
-    text-align: center;
-    padding: 30px;
-    opacity: 0.5;
-}
-</style>
 
+footer{
+    padding:45px;
+    text-align:center;
+    border-top:1px solid rgba(255,255,255,0.06);
+    color:#94a3b8;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .hero h1{
+        font-size:3.5rem;
+    }
+
+    nav{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+}
+
+</style>
 </head>
 
 <body>
 
-<header>
-    <h1 class="glow">Divinity Themis</h1>
-    <p>Exploring Metaphysics • Awakening Thought • Beyond Reality</p>
-</header>
+<div class="grid"></div>
 
-<section class="section">
-    <h2 class="glow">Courses</h2>
+<!-- NAVBAR -->
 
-    <div class="courses">
+<nav>
 
-        <div class="card">
-            <h3>Metaphysics: Reality & Being</h3>
-            <p>Understand existence, time, and the nature of reality.</p>
-            <a class="link" href="https://instagram.com/divinitythemis" target="_blank">
-                Enroll Now
+    <div class="logo">THEIA</div>
+
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Artificial Intelligence</a></li>
+        <li><a href="#">Cyber Law</a></li>
+        <li><a href="#">Computer Science</a></li>
+    </ul>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>THE FUTURE OF AI & CYBER INTELLENCE</h1>
+
+        <p>
+            THEIA is a futuristic digital company focused on Artificial Intelligence,
+            Cyber Law, Ethical Technology, Advanced Computing, Neural Systems,
+            and the evolution of next-generation cyber intelligence.
+        </p>
+
+        <div class="buttons">
+
+            <a href="https://www.instagram.com/theia.cyber/" 
+               target="_blank"
+               class="btn primary">
+               ENTER THEIA
             </a>
-        </div>
 
-        <div class="card">
-            <h3>Philosophy of Mind</h3>
-            <p>Explore consciousness, perception, and thought.</p>
-            <a class="link" href="https://instagram.com/divinitythemis" target="_blank">
-                Enroll Now
+            <a href="https://project-divinity.github.io/philosophy/" 
+               target="_blank"
+               class="btn secondary">
+               Mental.AI
             </a>
-        </div>
 
-        <div class="card">
-            <h3>Ethics & Truth</h3>
-            <p>Dive into morality, logic, and universal truth.</p>
-            <a class="link" href="https://instagram.com/divinitythemis" target="_blank">
-                Enroll Now
-            </a>
         </div>
 
     </div>
+
 </section>
 
+<!-- DOMAINS -->
+
 <section class="section">
-    <h2 class="glow">MENTAL.AI</h2>
+
+    <h2 class="section-title">OUR DOMAINS</h2>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <h3>Artificial Intelligence</h3>
+
+            <p>
+                Neural systems, autonomous AI frameworks,
+                advanced machine cognition, ethical AI,
+                and futuristic intelligent architectures.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Cyber Law</h3>
+
+            <p>
+                Digital rights, AI regulation, cyber governance,
+                data ethics, internet law, and futuristic legal structures.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Computer Science</h3>
+
+            <p>
+                Cybersecurity, programming systems,
+                computational intelligence, data systems,
+                and quantum-age technologies.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- THEIA CORE -->
+
+<section class="ai-core">
 
     <div class="ai-box">
-        <p>Seek clarity. Reflect. Heal.</p>
 
-        <a class="link" href="https://project-divinity.github.io/philosophy/" target="_blank">
-            Enter MENTAL.AI
-        </a>
+        <h2>THEIA CORE</h2>
+
+        <p>
+            Inspired by vision and perception, THEIA represents the bridge
+            between human intelligence and machine evolution.
+            We build systems where artificial intelligence, cyber law,
+            and advanced technology merge into a futuristic digital civilization.
+        </p>
+
     </div>
+
 </section>
 
+<!-- FOOTER -->
+
 <footer>
-    © 2026 Divinity Themis
+
+    © 2026 THEIA • AI • Cyber Law • Computer Science
+
 </footer>
 
 </body>
